@@ -36,7 +36,7 @@ Diese drei Strings müssen konkateniert werden. Der MD5 Hash dieses Strings bild
 
 Sie möchten ein neues Token erstellen, hierfür muss ein POST Request an die folgende URL gesendet werden: 
 
-`POST https://geprueft.de/api/invitation_token.json`
+`POST https://www.geprueft.de/api/invitation_token.json`
 
 Folgende Parameter seien gegeben:
 
@@ -54,7 +54,7 @@ Der MD5 Hash dieses Strings bildet die Signatur:
 
 Die Anfrage sieht also wie folgt aus:
 
-`POST http://geprueft.de/api/invitation_token.json?api_key=2VnR9sbAbTPY5cypmayc&timestamp=1332755556986 /`
+`POST http://www.geprueft.de/api/invitation_token.json?api_key=2VnR9sbAbTPY5cypmayc&timestamp=1332755556986 /`
 `&signature=75b0ad72a6a0a36ea551a57ccec3d3ac`
 
 Die erfolgreiche Antwort sieht folgendermaßen aus:
@@ -65,7 +65,7 @@ Die erfolgreiche Antwort sieht folgendermaßen aus:
 
 ### Erstellung eines Einladungs-Token
 
-`POST http://geprueft.de/api/invitation_token.json`
+`POST http://www.geprueft.de/api/invitation_token.json`
 
 Optional kann der Parameter `count` übergeben werden. Diese Parameter bestimmt die Anzahl an Tokens, die erstellt werden soll. Der default Wert beträgt 1. Es können bis zu 30 Token gleichzeitig erstellt werden.
 
@@ -75,7 +75,7 @@ Der Einladungs-Link, der an den Nutzer weitergegeben kann, sieht folgendermaßen
 
 ### Abfrage der aktiven Einladungs-Token
 
-`GET http://geprueft.de/api/invitation_token.json`
+`GET http://www.geprueft.de/api/invitation_token.json`
 
 Liefert eine Liste der aktuell gültigen Einladungs-Token zurück.
  
