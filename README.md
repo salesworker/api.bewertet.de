@@ -4,11 +4,11 @@
 
 Die API kann sowohl über HTTP als auch über HTTPS angesprochen werden. Der Endpoint für alle Requests ist:
 
-`geprueft.de/api`
+`www.geprueft.de/api`
 
 Alle Anfragen an die API sollten dem folgenden Schema folgen:
 
-`(http|https)://geprueft.de/api/<resource_name>.<format>`
+`(http|https)://www.geprueft.de/api/<resource_name>.<format>`
 
 Wobei <resource_name> der Name einer der unten genannten Ressourcen ist und <format> entweder xml oder json ist.
 
