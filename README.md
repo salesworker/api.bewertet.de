@@ -1,14 +1,14 @@
-# geprueft.de API
+# bewertet.de API
 
 ## Schema
 
 Die API kann sowohl über HTTP als auch über HTTPS angesprochen werden. Der Endpoint für alle Requests ist:
 
-`www.geprueft.de/api`
+`www.bewertet.de/api`
 
 Alle Anfragen an die API sollten dem folgenden Schema folgen:
 
-`(http|https)://www.geprueft.de/api/<resource_name>.<format>`
+`(http|https)://www.bewertet.de/api/<resource_name>.<format>`
 
 Wobei <resource_name> der Name einer der unten genannten Ressourcen ist und <format> entweder xml oder json ist.
 
@@ -36,7 +36,7 @@ Diese drei Strings müssen konkateniert werden. Der MD5 Hash dieses Strings bild
 
 Sie möchten ein neues Token erstellen, hierfür muss ein POST Request an die folgende URL gesendet werden: 
 
-`POST https://www.geprueft.de/api/invitation_token.json`
+`POST https://www.bewertet.de/api/invitation_token.json`
 
 Folgende Parameter seien gegeben:
 
@@ -54,7 +54,7 @@ Der MD5 Hash dieses Strings bildet die Signatur:
 
 Die Anfrage sieht also wie folgt aus:
 
-`POST http://www.geprueft.de/api/invitation_token.json?api_key=2VnR9sbAbTPY5cypmayc&timestamp=1332755556986 /`
+`POST http://www.bewertet.de/api/invitation_token.json?api_key=2VnR9sbAbTPY5cypmayc&timestamp=1332755556986 /`
 `&signature=75b0ad72a6a0a36ea551a57ccec3d3ac`
 
 Die erfolgreiche Antwort sieht folgendermaßen aus:
@@ -65,20 +65,20 @@ Die erfolgreiche Antwort sieht folgendermaßen aus:
 
 ### Erstellung eines Einladungs-Token
 
-`POST http://www.geprueft.de/api/invitation_token.json`
+`POST http://www.bewertet.de/api/invitation_token.json`
 
 Optional kann der Parameter `count` übergeben werden. Diese Parameter bestimmt die Anzahl an Tokens, die erstellt werden soll. Der default Wert beträgt 1. Es können bis zu 30 Token gleichzeitig erstellt werden.
 
 Der Einladungs-Link, der an den Nutzer weitergegeben kann, sieht folgendermaßen aus:
 
-`https://www.geprueft.de/rating/new?invite_token=<token_ID>`
+`https://www.bewertet.de/rating/new?invite_token=<token_ID>`
 
 ### Abfrage der aktiven Einladungs-Token
 
-`GET http://www.geprueft.de/api/invitation_token.json`
+`GET http://www.bewertet.de/api/invitation_token.json`
 
 Liefert eine Liste der aktuell gültigen Einladungs-Token zurück.
  
 ## Zugangsdaten
 
-Falls Sie Zugang zu unserer API erhalten möchten, wenden Sie sich bitte an info@geprueft.de oder rufen Sie uns an unter 0221-677797-0.
+Falls Sie Zugang zu unserer API erhalten möchten, wenden Sie sich bitte an info@bewertet.de oder rufen Sie uns an unter 0221-677797-0.
